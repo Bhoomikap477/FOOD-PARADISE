@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="resturant.css" />
+  </head>
+  <body>
+    <div id="navbar" class="sticky">
+      <a href="#" id="menus">Menu</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#" id="order">Order Now</a>
+    </div>
+
+    <div class="hero">
+      <h1 class="title">Cultural-Palate..</h1>
+      <h3 class="title1">
+        "From Street Food to Fine Dining, We Bring the World to You."
+      </h3>
+      <br />
+      <br />
+      <button id="loginBtn">Login</button>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="loginPopup">
+      <span class="close" onclick="closeLoginPopup()">&times;</span>
+      <form>
+        <center><h2>Login Form</h2></center>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          required
+        />
+        <p style="color: rgb(217, 185, 6)">forgot password?</p>
+
+        <button type="submit" id="lg">Login</button>
+        <a href="signUp.html"
+          ><p style="color: rgb(214, 197, 6)" id="sup" onclick="signup()">
+            Don't have an account? SignUp now
+          </p></a
+        >
+      </form>
+    </div>
+    <script>
+      // JavaScript to show and hide the login popup
+      const loginBtn = document.getElementById("loginBtn");
+      const loginPopup = document.getElementById("loginPopup");
+      const orderLink = document.getElementById("order");
+      const menus = document.getElementById("menus");
+      const classes = document.getElementsByClassName("class");
+
+      // Function to toggle login popup visibility
+      function toggleLoginPopup() {
+        if (loginPopup.style.display === "block") {
+          loginPopup.style.display = "none";
+        } else {
+          loginPopup.style.display = "block";
+        }
+      }
+
+      // Event listener for the order link
+      orderLink.addEventListener("click", () => {
+        toggleLoginPopup();
+      });
+
+      // Event listener for the login button
+      loginBtn.addEventListener("click", () => {
+        toggleLoginPopup();
+      });
+
+      menus.addEventListener("click", () => {
+        toggleLoginPopup();
+      });
+
+      // Event listener for the close button in the login popup
+      classes.addEventListener("click", () => {
+        toggleLoginPopup();
+      });
+    </script>
+  </body>
+</html>

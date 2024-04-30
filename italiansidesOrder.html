@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="navBar.css" />
+    <link rel="stylesheet" href="overall.css" />
+    <style>
+      .rating {
+        color: white;
+        font-size: 18px;
+        justify-content: space-around;
+        padding-left: 10px;
+      }
+      .price {
+        margin-top: 10px;
+        padding-right: 200px;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .original {
+        text-decoration: line-through;
+      }
+
+      #menu {
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+
+      #cart {
+        position: relative;
+      }
+
+      .bagitemcount {
+        position: absolute;
+        top: 15px;
+        right: 180px;
+        background-color: white;
+        color: black;
+        padding: 5px 8px;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="Menus.html" id="menu">Menu</a>
+      <a href="Restaurant.html">About Us</a>
+      <a href="#">Blog</a>
+      <a href="Menus.html" id="order">Order Now</a>
+      <a href="cart.html" id="cart"
+        ><img src="restaurant-icon-17.png" width="70px" /></a
+      ><span class="bagitemcount">0</span>
+    </div>
+
+    <center>
+      <br /><br /><br /><br /><br />
+      <h1 style="font-size: 50px">Italian Sides</h1>
+    </center>
+    <hr style="width: 50%; height: 5px" />
+
+    <div class="koreanfood">
+      <div class="gallerywrap">
+        <img src="images\icons8-back-arrow-50.png" id="back" alt="back arrow" />
+
+        <div class="gallery"></div>
+
+        <img
+          src="images\icons8-forward-button-50.png"
+          alt="Front arrow"
+          id="front"
+        />
+      </div>
+    </div>
+
+    <script src="italiansidesData.js"></script>
+    <script src="starters.js"></script>
+    <script>
+      let scrollContainer = document.querySelector(".gallery");
+      let backbtn = document.querySelector("#back");
+      let frontbtn = document.querySelector("#front");
+      scrollContainer.style.scrollBehavior = "smooth";
+
+      backbtn.addEventListener("click", () => {
+        scrollContainer.scrollLeft -= 1320; // Adjust this value as needed
+        scrollContainer.style.scrollBehavior = "smooth";
+      });
+
+      frontbtn.addEventListener("click", () => {
+        scrollContainer.scrollLeft += 1320; // Adjust this value as needed
+        scrollContainer.style.scrollBehavior = "smooth";
+      });
+    </script>
+  </body>
+</html>

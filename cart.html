@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="navBar.css" />
+    <style>
+      body {
+        margin: 0;
+        background-color: white;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-align: left;
+        color: black;
+      }
+
+      #cart {
+        position: relative;
+      }
+
+      .bagitemcount {
+        position: absolute;
+        top: 15px;
+        right: 180px;
+        background-color: white;
+        color: black;
+        padding: 5px 8px;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+
+      .one {
+        display: flex;
+        padding: 50px;
+        border: 2px solid rgb(231, 219, 219);
+        border-radius: 10px;
+        margin-top: 5px;
+        box-shadow: 5px 5px 80px rgb(218, 216, 216);
+      }
+
+      .information {
+        padding-left: 50px;
+      }
+
+      #Place {
+        width: 100%;
+        height: 40px;
+      }
+
+      .imageitem img {
+        border: 5px double rgb(197, 192, 192);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba(42, 42, 42, 0.895);
+      }
+
+      th {
+        color: green;
+      }
+      td {
+        color: rgb(201, 7, 7);
+      }
+
+      #deletes {s
+        top: 18%;
+        position: absolute;
+        left: 1520px;
+      }
+
+      .container {
+        display: block;
+        margin: 10px 400px;
+      }
+
+      #choice {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 20px;
+        color: green;
+        border: 2px solid rgb(212, 209, 209);
+      }
+
+    
+
+      input{
+        width: 50%;
+        height: 50px;
+        font-size: 25px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px rgb(222, 218, 218);
+      }
+
+      #payment{
+        width: 50%;
+        font-size: 35px;
+        background-color: green;
+        margin-top: 20px;
+        border-radius: 5px;
+        color: white;
+        box-shadow: 10px 10px 10px rgb(222, 218, 218);
+      }
+      /* The Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); /* Fallback color */
+        backdrop-filter: blur(5px);
+        cursor: pointer;
+        
+        border-radius: 5px;
+      
+      }
+
+/* Modal Content */
+.modal-content {
+  background-color: #efefeb;
+  margin: 15% auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+ 
+  border-radius: 10px;
+
+}
+
+/* Close Button */
+.close {
+  color: #eae2e2;
+  float: right;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="Menus.html" id="menu">Menu</a>
+      <a href="Restaurant.html">About Us</a>
+      <a href="#">Blog</a>
+      <a href="Menus.html" id="order">Order Now</a>
+      <a href="#" id="cart"><img src="restaurant-icon-17.png" width="65px" /></a
+      ><span class="bagitemcount">1</span>
+    </div>
+
+    <div class="container">
+      <div class="one-container">
+        <!-- Display items here -->
+      </div>
+      <!-- Order summary will be inserted here -->
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="close" onclick="closeModal()">&times;</div><br/>
+        <h1 style="color: rgb(108, 9, 9);">Make Payment</h1>
+        <input type='number' placeholder='Enter the amount' id='amount'></input><br/>
+        <input type='password' placeholder='Enter the Correct PIN' id='pin'></input><br/>
+        <button id="payment" onclick="makePayment()">Pay</button>
+      </div>
+    </div>
+    
+    <script src="koreanstartersData.js"></script>
+    <script src="starters.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+
+      function makePayment(){
+      closeModal(); // Close the modal
+      setTimeout(() => {
+        document.querySelector('.container').innerHTML = "<h1 style='text-align: center; color: green;'><img src='successful.png' style='width: 70px; height:70px'>Payment Successful</h1><h1 style='text-align: center; color: green;'>Delicious Food is Enrouted..😊</h1><h1 style='text-align: center; color: green;'>Thank You for Ordering!.. Please visit again</h1>";
+      }, 500); // Display the success message after a delay
+}
+
+
+    </script>
+  </body>
+</html>

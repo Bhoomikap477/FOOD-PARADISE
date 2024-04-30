@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 25px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0;
+        background-color:black;
+        
+        
+      }
+      .container {
+        display: none;
+        width: 1200px;
+        margin: 100px 350px;
+        text-align: justify;
+        padding: 50px;
+        box-shadow: 10px 10px 50px rgb(57, 57, 57);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.986);
+      }
+
+      .navbar {
+        background-color: #08080861; 
+        position: sticky; 
+            top: 0; 
+            z-index: 1000;
+      }
+
+      .navbar li {
+        float: left;
+      }
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Use flexbox */
+        justify-content: space-around; /* Distribute items equally */
+        align-items: center; /* Align items vertically */
+        height: 100px; /* Set the height of the navbar */
+      }
+
+      .navbar-item {
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 25px; /* Adjust padding as needed */
+        cursor: pointer;
+      }
+
+      .navbar-item:hover {
+        color: rgb(176, 9, 82);
+      }
+
+      #home a{
+        text-decoration: none;
+        color: white;
+
+      }
+
+      #home{
+        border:2px solid white;
+        border-radius: 5px;
+      }
+
+      .first{
+        width: 1200px;
+        padding: 50px;
+        margin:50px 350px;
+        font-size: 40px;
+        text-decoration:solid;
+        text-shadow: 10px 10px 10px grey;
+        text-align: justify;
+        color: white;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-item").click(function () {
+          var target = $(this).data("target");
+          $(".container").hide();
+          $("." + target).show();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li class="navbar-item" id="home"><a href="Restaurant.html">Home</a></li>
+        <li class="navbar-item" data-target="history">History</li>
+        <li class="navbar-item" data-target="mission">Mission</li>
+        <li class="navbar-item" data-target="cuisines">
+          Cuisine and Specialties
+        </li>
+        <li class="navbar-item" data-target="customer">Customer Experience</li>
+        <li class="navbar-item" data-target="community">
+          Community Involvement
+        </li>
+        <li class="navbar-item" data-target="future">Future Expansion</li>
+        <li class="navbar-item" data-target="contact">Contact Information</li>
+      </ul>
+    </div>
+
+    
+   <div class="first">
+      Welcome to "Food Paradise," where culinary dreams come to life and
+      flavors from around the world converge in a celebration of taste and
+      culture.
+    </div>
+
+    <div class="container history">
+      
+      <h1>History:</h1>
+      <p>
+        In the heart of Banglore, "Food Paradise" emerged as a culinary haven,
+        founded in 2010 with a fervent vision to honor the richness of
+        international flavors. What began as a dream shared among friends soon
+        blossomed into a beloved establishment, where each dish became a
+        passport to distant lands. From the rolling hills of Tuscany to the
+        bustling streets of Seoul, Food Paradise beckoned diners to embark on a
+        gastronomic journey like no other. But beyond the tantalizing aromas and
+        savory delights, it was a place of community—a gathering spot where
+        laughter flowed freely and bonds were forged over shared meals. As the
+        years passed, Food Paradise stood as a testament to the power of
+        culinary excellence and the enduring magic of a shared dining
+        experience.
+      </p>
+    </div>
+
+    <div class="container mission">
+      <h1>Mission and Vision</h1>
+      <p>
+        <h2>Mission</h2>
+
+<p>At Food Paradise, our mission is to provide an exceptional dining experience that celebrates diversity, fosters connections, and inspires our guests through the universal language of food.</p>
+
+<h2>Core Values:</h2>
+<p>
+Excellence: We are dedicated to excellence in every aspect of our operation, from the quality of our ingredients to the level of service we provide. We strive to exceed the expectations of our guests and create memorable dining experiences that leave a lasting impression.</p>
+<p>
+Diversity: We embrace the rich diversity of cuisines and cultures from around the world, recognizing that food has the power to unite people across borders and generations. Our menu reflects this diversity, offering a wide range of culinary delights that appeal to every palate.</p>
+<p>
+Authenticity: We are committed to authenticity in our cooking, using traditional recipes and techniques passed down through generations to create dishes that are true to their cultural roots. From the spices we use to the cooking methods we employ, authenticity is at the heart of everything we do.</p>
+<p>
+Hospitality: We believe in the power of hospitality to create meaningful connections and enrich the lives of our guests. From the moment you walk through our doors, you are welcomed as a member of our family, and we strive to make every visit a warm and welcoming experience.</p>
+
+
+<h2>Vision:</h2>
+<p>
+Our vision is to be recognized as a premier dining destination that celebrates the diversity of global cuisines and delights guests with exceptional food, genuine hospitality, and unforgettable experiences. We aspire to be a place where people come together to share laughter, create memories, and savor the joys of life around the communal table.
+
+
+      </p>
+    </div>
+
+    <div class="container cuisines">
+      <h1>Cuisine and Specialties:</h1>
+      <p>
+        At our restaurant, we take pride in offering a diverse array of culinary
+        delights that celebrate the rich tapestry of global flavors. From the
+        bold and spicy dishes of Korea to the comforting classics of Italy, the
+        hearty fare of Britain, and the vibrant flavors of Thailand, our menu is
+        a culinary journey like no other.
+      </p>
+
+      <h2>Korean Cuisine:</h2>
+      <p>
+        Indulge in the bold and fiery flavors of Korean cuisine with our
+        selection of savory delights. From sizzling bulgogi to flavorful
+        bibimbap and crispy Korean fried chicken, each dish is a testament to
+        the bold and adventurous spirit of Korean cooking.
+      </p>
+
+      <h2>Italian Cuisine:</h2>
+      <p>
+        Transport yourself to the sun-drenched hills of Italy with our authentic
+        Italian specialties. Savor the rich flavors of handmade pastas,
+        wood-fired pizzas, and hearty risottos, all lovingly crafted using
+        time-honored recipes and the finest ingredients imported from Italy.
+      </p>
+
+      <h2>British Cuisine:</h2>
+      <p>
+        Experience the warmth and nostalgia of British cuisine with our
+        selection of hearty classics. From traditional fish and chips to
+        comforting shepherd's pie and savory Yorkshire puddings, each dish is a
+        celebration of the timeless flavors and culinary heritage of Britain.
+      </p>
+      <h2>Thai Cuisine:</h2>
+      <p>
+        Embark on a culinary adventure to the bustling streets of Thailand with
+        our vibrant and aromatic Thai dishes. From fragrant curries and zesty
+        stir-fries to refreshing salads and decadent desserts, each dish bursts
+        with the bold and exotic flavors of Thai cuisine.
+      </p>
+
+      <h2>Seasonal Offerings:</h2>
+      <p>
+        In addition to our signature specialties, we also feature seasonal
+        offerings that showcase the best of what each season has to offer. Our
+        rotating menu includes fresh, seasonal ingredients and innovative
+        creations inspired by the bounty of the season.
+      </p>
+      <h2>Chef's Recommendations:</h2>
+      <p>
+        For those seeking culinary inspiration, we invite you to explore our
+        chef's recommendations. Handpicked by our talented culinary team, these
+        dishes highlight the best of what our kitchen has to offer and promise
+        to delight even the most discerning palate.
+      </p>
+
+      <h2>Customization Options:</h2>
+      <p>
+        At our restaurant, we understand that every diner is unique. That's why
+        we offer customization options to accommodate a variety of dietary
+        preferences and restrictions. Whether you're vegetarian, vegan,
+        gluten-free, or have specific dietary needs, our menu has something for
+        everyone.
+      </p>
+    </div>
+
+    <div class="container customer">
+      <h1>Customer Experience:</h1>
+      <p>
+        Don't just take our word for it – hear what our satisfied customers have
+        to say about their dining experiences at "Food Paradise". Read glowing
+        testimonials and discover why diners keep coming back for more. 
+        <p>"The
+        food at "Food Paradise" exceeded all expectations! Each dish was
+        bursting with flavor, and the service was impeccable. Can't wait to come
+        back!" - Sarah T.</p><p> "From the moment we walked in, we were treated like
+        family. The ambiance, the food, and the overall experience at
+        "Food Paradise" were top-notch. Highly recommend!" - John D.</p><p> "I've
+        dined at many restaurants, but "Food Paradise" truly stands out. The
+        attention to detail, the quality of ingredients, and the creativity in
+        each dish make it a dining experience like no other." - Emily L.</p>
+      </p>
+    </div>
+
+    <div class="container community">
+      <h1>Community Involvement:</h1>
+      <p>
+        "Food Paradise" proudly contributes to the vibrancy of our local
+        community. We actively support local charities, engage in community
+        events, and strive to make a positive impact wherever we go. Join us as
+        we work together to create a brighter future for all.
+
+      </p>
+      <p>
+      "Food Paradise" is proud to be an active member of the local community. We support local charities, participate in community events, and strive to make a positive impact wherever we go.
+
+We believe in giving back to the community that has embraced us. That's why we regularly donate a portion of our proceeds to local charities and organizations that are making a difference in the lives of others.</p>
+<p>
+Whether it's sponsoring a local event, organizing fundraisers, or volunteering our time, we are committed to being a positive force for change in our community.
+
+At [Restaurant Name], community involvement isn't just something we do – it's who we are. We believe that by working together, we can create a brighter future for everyone.</p>
+    </div>
+
+    <div class="container future">
+      <h1>Future Expansion:</h1>
+      <p>
+        Ready to embark on a culinary journey at "Food Paradise" Contact us
+        today to reserve your table, inquire about catering services, or explore
+        our menu offerings in greater detail. Your culinary adventure awaits!
+
+
+      </p>
+
+      <p>
+        While currently specializing in British, Italian, and Korean cuisines, [Restaurant Name] is always looking to expand our culinary horizons. Stay tuned for exciting updates as we introduce even more international flavors to our menu in the future.
+</p><p>
+Our passion for food knows no bounds, and we're constantly exploring new cuisines and flavors to bring to our guests.
+</p><p>
+From exploring the vibrant street food of Thailand to delving into the rich culinary traditions of India, the possibilities are endless.</p><p>
+
+Keep an eye out for our upcoming menu additions and special events as we continue to expand our culinary offerings and share the flavors of the world with our guests.
+      </p>
+    </div>
+
+    <div class="container contact">
+      <h1>Contact Information:</h1>
+      <p>
+       <h2> Ready to experience the flavors of the world at "food Paradise"? </h2>
+       <h3>Contact us today to make a reservation, inquire about catering services, or learn more about our menu offerings.</h3>
+
+<h3>Phone: 9741193277</h3>
+<h3>Email: bhoomikap477@gmail.com</h3>
+<h3>Address: Jp Nagar, 4th cross, 1st main road, Banglore, Karnataka, 581220</h3>
+      </p>
+    </div>
+  </body>
+</html>

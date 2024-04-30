@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("login.jpg");
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        color: rgb(255, 253, 254);
+        font-size: 65px;
+        text-align: center;
+      }
+
+      .login {
+        text-align: center;
+        margin-bottom: 270px;
+        animation: slideDown 2s forwards;
+      }
+
+      @keyframes slideDown {
+        from {
+          margin-top: -200px; /* Start offscreen */
+        }
+        to {
+          margin-top: 0; /* Slide down to its original position */
+        }
+      }
+      input,
+      button {
+        width: 500px;
+        height: 50px;
+        margin-top: 25px;
+        font-size: 20px;
+        border-radius: 5px;
+        color: white;
+        box-shadow: 10px 10px 10px black;
+      }
+
+      button {
+        background-color: rgb(246, 85, 68);
+      }
+
+      input {
+        background-color: rgba(227, 34, 34, 0.074);
+      }
+
+      input::placeholder {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WELCOME</h1>
+    <h1>TO FOOD PARADISE</h1>
+
+    <div class="login">
+      <form action="login.php">
+        <br /><br />
+        <h1>WELCOME</h1>
+    <h1>TO FOOD PARADISE</h1>
+
+    <div class="login">
+        <form id="loginForm" action="login.php" method="GET">
+            <br /><br />
+            <h1>LOGIN HERE</h1>
+            <input type="email" name="email" id="email" placeholder="Enter your email" />
+            <br />
+            <input type="password" name="password" id="password" placeholder="Enter your password" /><br />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+  
+  </body>
+</html>

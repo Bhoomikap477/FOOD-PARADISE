@@ -1,0 +1,111 @@
+ body{
+     
+  background: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url("hotel.jpg");
+  background-size:cover; /* Adjust as needed */
+
+  background-repeat: no-repeat;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+}
+
+    
+   
+    .koreanfood{
+            display: flex;
+            padding:20px;
+          
+           
+        }
+
+        
+    .gallery{
+      width:1300px;
+      height: 500px;
+      display: flex;
+      overflow-x:scroll;
+      padding: 10px;
+      background-image: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.5),rgb(0,0,0,0.7));
+      border-radius: 5px;
+      border:2px solid rgb(127, 126, 126);
+      box-shadow: 20px 20px 20px black;
+    }
+
+    .gallery .inside{
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap:50px;
+      padding: 10px;
+      flex:none;
+    }
+
+    .gallery div img{
+      width: 700px;
+      
+      transform: 0.5s;
+    }
+
+    .gallery::-webkit-scrollbar{
+      display: none;
+    }
+
+    .gallerywrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2% auto;
+      cursor: pointer;
+    }
+
+    #back,#front{
+      width:70px;
+      cursor: pointer;
+      margin: 40px;
+    }
+
+    .gallery div img:hover{
+      
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    .menus{
+        display: flex;
+        
+    }
+
+    .info{
+      align-items: center;
+      padding: 50px 0px;
+    }
+
+    h1{
+      color: white;
+       font-weight: 10;
+       font-family: Sans-serif;
+    }
+    h3{
+      color: white; 
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: 10; 
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .order {
+      cursor: pointer;
+    display: flex;
+    justify-content:space-around;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    background-image:linear-gradient(rgb(0,0,0,0.8),rgb(0,0,0,0.8)); 
+    margin-top: 60px;
+    border: 2px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgb(39, 39, 39);
+  }
+
+  .order span {
+    padding: 10px 50px;
+  }

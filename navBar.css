@@ -1,0 +1,32 @@
+#navbar{
+  display:flex; 
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+
+}
+
+#navbar,a{
+  text-decoration: none;  
+  padding: 10px;
+ 
+
+}
+
+a{
+  /* margin-left: 100px;
+  margin-right: 100px;
+  margin-top:5px;
+  margin-bottom: 5px; */
+  margin: auto;
+  text-align: center;
+  color:rgb(224, 229, 232);
+  font-size: 20px;
+}
+
+
+
+a:hover {
+  color: rgb(173, 173, 16);
+  /* Add background color on hover */
+  border-radius: 3px;
+
+}
